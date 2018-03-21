@@ -11,7 +11,7 @@ class Sqlhelper {
 	
 	/**
 	 * 构造查询参数
-	 * @param array $params
+	 * @param array $param
 	 */
 	public static function buildSql($params) {
 		$ret = array('sql' => '', 'params' => array());

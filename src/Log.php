@@ -1,5 +1,5 @@
 <?php
-namespace Score;
+namespace SCore;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 /**

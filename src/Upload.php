@@ -1,5 +1,5 @@
 <?php
-namespace Score;
+namespace SCore;
 /**
  * @author dawn
  * 引入后实例化时传入一个配置数组即可

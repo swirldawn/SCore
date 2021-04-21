@@ -4,10 +4,11 @@
  */
 
 function get_config($key,$default_value=""){
-
+    global $config;
+   
     $realKey = explode(".",$key);
-
-    $re = $config;
+    
+    $re = $config[$realKey[0]];
 
     if(isset($realKey[1])){
         if(isset($realKey[2])){

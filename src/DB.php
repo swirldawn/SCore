@@ -1,5 +1,5 @@
 <?php
-namespace Score;
+namespace SCore;
 /**
  * Created by PhpStorm.
  * User: dawnlight
@@ -39,8 +39,8 @@ class DB {
             'username'      => get_config("{$db}.username"),
             'password'      => get_config("{$db}.password"),
             'option' => [
-                PDO::ATTR_STRINGIFY_FETCHES =>false,//禁止把结果全部改成字符串
-                PDO::ATTR_EMULATE_PREPARES =>false
+                \PDO::ATTR_STRINGIFY_FETCHES =>false,//禁止把结果全部改成字符串
+                \PDO::ATTR_EMULATE_PREPARES =>false
             ]
         ]);
 
@@ -64,7 +64,7 @@ class DB {
             case "select":
                 $query = $db->query(...$arg_array);
                 self::error($db);
-                return $query->fetchAll(PDO::FETCH_ASSOC);
+                return $query->fetchAll(\PDO::FETCH_ASSOC);
                 break;
             case "exec":
                 $result = $db->exec(...$arg_array);
@@ -176,7 +176,9 @@ class DB {
         $this->error($this->daoObject);
         return $min;
     }
-
+    /**
+     * ['name','age']
+     */
     public function columns($columns){
 
         $this->column = $columns;
@@ -323,7 +325,7 @@ class DB {
 
         $db = self::getDao();
 
-        $data = $db->query($sql,$map)->fetchAll(PDO::FETCH_ASSOC);
+        $data = $db->query($sql,$map)->fetchAll(\PDO::FETCH_ASSOC);
 
         return $data;
     }
@@ -333,7 +335,7 @@ class DB {
         $error = $db->pdo->errorInfo();
 
         if($error[0]!="00000"){
-            throw new Exception(implode("-",$error),500);
+            throw new \Exception(implode("-",$error),500);
         }
 
         return false;

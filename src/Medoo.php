@@ -8,7 +8,7 @@
  * Released under the MIT license
  */
 
-namespace Score;
+namespace SCore;
 
 use PDO;
 use Exception;

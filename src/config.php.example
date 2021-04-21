@@ -1,0 +1,11 @@
+<?php 
+$config = [
+    "db"=>[
+        "database_type"=>"mysql",
+        "database_name"=>"dbname",
+        "server"=>"localhost:3306",
+        "username"=>"root",
+        "password"=>"root",
+        "table_prefix"=>"a_",
+    ]
+];

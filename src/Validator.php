@@ -1,5 +1,5 @@
 <?php
-namespace Score;
+namespace SCore;
 /**
  * 验证类
  */

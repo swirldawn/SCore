@@ -1,5 +1,5 @@
 <?php
-namespace Score;
+namespace SCore;
 /**
  * Created by PhpStorm.
  * User: dawnlight

@@ -53,6 +53,9 @@ $all = DB::table('name')->get();
 $all = DB::table('name')->where("age",">","20")->get();
 //获取部分字段
 $all = DB::table('name')->columns(['name','age'])->get();
+
+//分页
+$list = DB::table('name')->paginate();
 // 插入
 DB::table('users')->insert(
   ['email' => 'john@example.com', 'votes' => 0]

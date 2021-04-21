@@ -9,6 +9,22 @@
 "monolog/monolog": "1.23.0",
 ```
 # 测试使用方式
+#### compser 文件格式
+```
+{
+    "repositories": [{
+            "type": "git",
+            "url": "https://github.com/swirldawn/score.git"
+        },
+        { "type": "composer", "url": "https://packagist.phpcomposer.com" },
+        { "packagist": false }
+    ],
+    "require": {
+        "swirldawn/score": "dev-master"
+    }
+}
+```
+#### 入口文件测试
 ```
 <?php
 namespace Score;
@@ -25,7 +41,7 @@ define('TABLE_PREFIX', get_config("db.table_prefix"));
 $list = \SCore\DB::table("users")->limit(1)->get();
 dd($list);
 ```
-
+> php test.php
 ### 常用操作
 
 ```

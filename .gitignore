@@ -1,0 +1,11 @@
+.idea/*
+.idea
+/.idea/*
+/.idea
+/configs/application.ini
+Homestead.yaml
+Homestead.json
+.env
+/storage/exports
+/storage/*
+/src/config.php
